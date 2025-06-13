@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inteligencia Artificial Generativa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <style>
+        :root {
+            --electric-blue: #0af;
+            --dark-bg: #121212;
+            --dark-bg-alt: #1f1f1f;
+            --text-light: #e0e6f0;
+            --accent-glow: #0af7ff;
+        }
+        [data-theme="light"] {
+            --electric-blue: #007bff;
+            --dark-bg: #f8f9fa;
+            --dark-bg-alt: #ffffff;
+            --text-light: #212529;
+            --accent-glow: #66d9ef;
+        }
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding-top: 4.5rem;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        a {
+            color: var(--electric-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover, a:focus {
+            color: var(--accent-glow);
+            text-decoration: underline;
+            outline: none;
+        }
+        header {
+            background: var(--dark-bg-alt);
+            box-shadow: 0 2px 8px rgb(10 175 255 / 0.2);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030;
+            transition: background-color 0.5s ease;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--electric-blue);
+            text-shadow: 0 0 8px var(--accent-glow);
+        }
+        .section-container {
+            max-width: 900px;
+            padding: 3rem 1.5rem;
+            margin: 0 auto;
+        }
+        h2 {
+            color: var(--electric-blue);
+            font-weight: 700;
+            text-shadow: 0 0 6px var(--accent-glow);
+            margin-bottom: 1.25rem;
+            border-bottom: 2px solid var(--electric-blue);
+            padding-bottom: 0.3rem;
+            transition: color 0.5s ease;
+        }
+        p {
+            color: var(--text-light);
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            transition: color 0.5s ease;
+        }
+        .img-fluid {
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(10, 175, 255, 0.3);
+            margin: 1.5rem 0;
+            transition: box-shadow 0.5s ease;
+        }
+        @media (min-width: 768px) {
+            .section-card {
+                background: var(--dark-bg-alt);
+                border-radius: 12px;
+                padding: 2rem 2.5rem;
+                box-shadow: 0 0 12px rgb(10 175 255 / 0.15);
+                transition: box-shadow 0.3s ease, background-color 0.5s ease;
+            }
+            .section-card:hover,
+            .section-card:focus-within {
+                box-shadow: 0 0 20px var(--accent-glow);
+            }
+        }
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+            user-select: none;
+            transition: color 0.5s ease;
+        }
+        .btn-theme {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-transparent px-4">
+            <a class="navbar-brand" href="#">IA Generativa</a>
+            <button id="toggle-theme" class="btn btn-outline-info btn-theme">🌙</button>
+        </nav>
+    </header>
+
+    <main class="pt-4">
+        <section id="definicion" class="section-container section-card mb-5" tabindex="0">
+            <h2>Definición de la IA Generativa</h2>
+            <p>
+                La Inteligencia Artificial Generativa es una rama avanzada del aprendizaje automático
+                que se enfoca en crear sistemas capaces de generar contenido original, desde texto y
+                imágenes hasta música y video. Utiliza redes neuronales complejas, como los modelos de
+                lenguaje y generativos, para sintetizar datos nuevos basados en patrones aprendidos.
+            </p>
+            <p>
+                Esta tecnología permite crear simulaciones realistas, asistir en procesos creativos y
+                automatizar tareas que requieren generación de datos novedosos y contextualmente relevantes.
+            </p>
+            <img src="images/f048b4be-b93e-460e-b54a-4d32e809ab8c.jpg" alt="Imagen IA Definición" class="img-fluid">
+        </section>
+
+        <section id="usos" class="section-container section-card mb-5" tabindex="0">
+            <h2>Usos en la vida cotidiana</h2>
+            <p>
+                La IA Generativa se ha integrado en diversas aplicaciones que facilitan y enriquecen la
+                vida diaria, tales como asistentes virtuales inteligentes, generación automática de texto para
+                correos electrónicos o contenidos, creación de imágenes artísticas, diseño de productos, y
+                personalización de experiencias digitales.
+            </p>
+            <p>
+                En entretenimiento y medios, permite la creación de música y videos personalizados, mientras que
+                en la educación soporta la creación de recursos didácticos adaptativos y simulaciones interactivas.
+            </p>
+            <img src="images/3dd540cb-90d6-4303-9651-29e4c94812d8.jpg" alt="Imagen IA Usos" class="img-fluid">
+        </section>
+
+        <section id="futuro" class="section-container section-card mb-5" tabindex="0">
+            <h2>Futuro de la IA Generativa</h2>
+            <p>
+                El futuro de la IA Generativa se proyecta con avances que mejorarán la creatividad humana,
+                automatizarán procesos complejos y abrirán nuevas oportunidades en campos como la medicina, la
+                ingeniería y el arte. Se espera que los modelos sean cada vez más precisos, eficientes y éticos,
+                favoreciendo una colaboración armoniosa entre humanos y máquinas.
+            </p>
+            <p>
+                Asimismo, habrá un enfoque creciente en la responsabilidad, privacidad y regulación para asegurar
+                que estas tecnologías se utilicen de manera segura y beneficiosa para la sociedad.
+            </p>
+            <img src="images/1a3da84c-c262-4be9-a897-554d218b3694.jpg" alt="Imagen IA Futuro" class="img-fluid">
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 IA Generativa. Todos los derechos reservados.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+        const btn = document.getElementById('toggle-theme');
+        btn.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'light') {
+                document.documentElement.removeAttribute('data-theme');
+                btn.innerHTML = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                btn.innerHTML = '🌞';
+            }
+        });
+    </script>
+</body>
+</html>
